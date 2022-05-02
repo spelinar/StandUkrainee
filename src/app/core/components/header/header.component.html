@@ -1,0 +1,48 @@
+<ion-toolbar class="header-container">
+  <ion-row
+    (click)="navigateToMenu()"
+    class="mobile-header-container hidden-lg-up"
+  >
+    <img
+      alt="Actaware logo"
+      src="./assets/icon/ActAwareLogo.png"
+      class="actaware-logo"
+    >
+    <img
+      alt="Flag of Ukraine"
+      src="./assets/icon/ukraineflag.jpg"
+      class="ukraine-flag"
+    >
+  </ion-row>
+  <ion-row class="desktop-header-container hidden-lg-down">
+    <img
+      (click)="navigateToMenu()"
+      alt="Actaware logo"
+      src="./assets/icon/ActAwareLogo.png"
+      class="actaware-logo cursor-pointer"
+    >
+    <div>
+      <a
+        (click)="navigateToMenu()"
+        class="link"
+      >
+        Home
+      </a>
+      <a
+        href="mailto:contact@actaware.com"
+        rel="noreferrer noopener"
+        class="link"
+      >
+        Contact
+      </a>
+      <a
+        [href]="aboutUrl"
+        rel="noreferrer noopener"
+        target="_blank"
+        class="link"
+      >
+        About Us
+      </a>
+    </div>
+  </ion-row>
+</ion-toolbar>

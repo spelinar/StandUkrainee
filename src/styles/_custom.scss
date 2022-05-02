@@ -1,0 +1,44 @@
+.action-button {
+  background: $orange-button;
+  border-radius: 6px;
+  color: $white;
+  font-size: 14px;
+  font-weight: bold;
+  height: 91px;
+  width: 256px;
+
+  &:nth-of-type(1n+2) {
+    margin-left: 21px;
+  }
+
+  @media only screen and (max-width: $breakpoint-xl) {
+    height: 70px;
+  }
+
+  @media only screen and (max-width: $breakpoint-lg) {
+    border-radius: 22px;
+    height: 44px;
+    width: 190px;
+
+    &:nth-of-type(1n+2) {
+      margin-left: 0;
+      margin-top: 15px;
+    }
+  }
+}
+
+.footer-container {
+  @extend .hidden-lg-down;
+
+  align-items: center;
+  background-color: #5D5D5D;
+  display: flex;
+  height: 165px;
+  padding: 0 5%;
+  width: 100%;
+
+  .footer-logo {
+    height: 60px;
+    max-width: 222px;
+  }
+}

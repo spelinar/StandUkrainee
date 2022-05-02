@@ -1,0 +1,14 @@
+<ion-app>
+  <ion-header
+    [class.hidden-lg-down]="!showHeader"
+    class="ion-no-border"
+  >
+    <app-header></app-header>
+  </ion-header>
+  <ion-content [forceOverscroll]="false">
+    <ion-router-outlet></ion-router-outlet>
+  </ion-content>
+  <ion-footer>
+    <app-footer></app-footer>
+  </ion-footer>
+</ion-app>

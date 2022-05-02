@@ -1,0 +1,46 @@
+@import '../../../../styles/variables';
+
+:host {
+  width: 100%;
+}
+
+.subscribe-form {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  @media only screen and (max-width: $breakpoint-lg) {
+    flex-direction: column;
+  }
+}
+
+ion-input{
+  --background: $white;
+  box-shadow: 0 3px 6px #00000029;
+  border: 1px solid $text-secondary;
+  border-radius: 22px;
+  font-size: 16px;
+  height: 50px;
+  max-width: 450px;
+  --padding-end: 22px;
+  --padding-start: 22px;
+  --placeholder-color: $light-placeholder;
+  text-align: left;
+  width: 100%;
+
+  &.ion-invalid {
+    border-color: red;
+  }
+}
+
+.action-button {
+  height: 60px;
+  margin-left: 35px;
+
+  @media only screen and (max-width: $breakpoint-lg) {
+    height: 44px;
+    margin-left: 0;
+    margin-top: 15px;
+  }
+}

@@ -1,0 +1,110 @@
+<ion-content>
+  <div class="dashboard-head-container">
+    <ion-img
+      src="./assets/icon/dashboard-background.png"
+      class="head-background-img"
+    ></ion-img>
+    <ion-img
+      src="./assets/icon/ukraineflag.jpg"
+      class="head-bottom-flag"
+    >
+    </ion-img>
+    <ion-row class="head-container">
+      <ion-img
+        src="./assets/icon/heartukraine.png"
+        class="head-ukraine-heart"
+      >
+      </ion-img>
+      <div class="head-text-container">
+        <h1 class="head-text-1 ion-text-uppercase">Take a stand</h1>
+        <h2 class="head-text-2 ion-text-uppercase">Against war</h2>
+      </div>
+    </ion-row>
+  </div>
+  <ion-grid class="dashboard-middle-container">
+    <ion-row class="middle-heart-container">
+      <ion-img
+        src="./assets/icon/heartukraine.png"
+        class="middle-ukraine-heart"
+      >
+      </ion-img>
+      <ion-text class="middle-heart-text">
+        <h1 class="heart-text-1 ion-text-uppercase">Take a stand</h1>
+        <h2 class="heart-text-2 ion-text-uppercase">Against war</h2>
+      </ion-text>
+    </ion-row>
+    <ion-row>
+      <ion-col
+        size="12"
+        size-lg="6"
+        class="middle-text-container"
+      >
+        <ion-text>
+          <h5>
+            As the Russian invasion of Ukraine continues; consumers, employees and investors are demanding companies to
+            cease their business with Russia.
+            We have created this tool to help YOU determine which companies are still in business with Russia by quickly
+            searching a brand or scanning a product barcode.
+          </h5>
+          <h5 class="font-weight-bold">Choose which company to support or avoid based on their values and actions</h5><br>
+          <h4 class="important-text hidden-lg-up">Let's make this world a better place</h4>
+        </ion-text>
+      </ion-col>
+      <ion-col
+        size="12"
+        size-lg="6"
+        class="middle-search-container"
+      >
+        <div class="searcher-container">
+          <app-autocomplete #autocomplete></app-autocomplete>
+        </div>
+        <div class="buttons-container">
+          <button
+            (click)="navigateToScan()"
+            class="action-button ion-text-uppercase"
+          >
+            Scan barcode
+          </button>
+          <button
+            (click)="navigateToSearch()"
+            class="action-button ion-text-uppercase"
+          >
+            <span class="hidden-lg-down">Company list</span>
+            <span class="hidden-lg-up">Company search</span>
+          </button>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row class="dashboard-about-us-container">
+      <ion-label>
+        <a
+          [href]="aboutUrl"
+          rel="noreferrer noopener"
+          target="_blank"
+          class="about-us-label"
+        >
+          Actaware.com
+        </a>
+      </ion-label>
+    </ion-row>
+    <ion-row class="dashboard-support-container">
+      <h4 class="font-weight-bold">Why do we need your support?</h4>
+      <h5>If you find ActAgainstWar useful, please consider sharing with friends, and subscribing below as ActAware supporter. We also welcome any feedback you might have for us, as we always thrive to improve.</h5>
+      <h5>Our team have created ActAgainstWar to support efforts of stopping the war. We do not procure any revenue from this effort and we are thankful to our friends from Scandit for waiving their fees on their brilliant scanning service. If you'd like to support us as well, we welcome your contributions to cover our operational costs (coming soon).</h5>
+      <h4 class="important-text">Let's make this world a better place</h4>
+      <div class="dashboard-support-shared">
+        <app-share-buttons></app-share-buttons>
+      </div>
+      <div class="dashboard-support-subscribe">
+        <app-subscribe></app-subscribe>
+      </div>
+    </ion-row>
+  </ion-grid>
+  <div class="footer-container">
+    <ion-img
+      src="./assets/icon/ActAwareLogo.png"
+      class="footer-logo"
+    >
+    </ion-img>
+  </div>
+</ion-content>

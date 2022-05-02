@@ -1,0 +1,39 @@
+@import "../../../../styles/variables";
+
+.searchbar {
+  border-radius: 100px;
+}
+
+:host ::ng-deep {
+  ion-label.item-label {
+    color: $text-secondary;
+    font-size: 20px;
+    margin: 0;
+    padding-left: 20px;
+
+    @media only screen and (min-width: $breakpoint-lg) {
+      &:hover {
+        background: $white;
+        color: $orange-text;
+      }
+    }
+  }
+}
+
+.search-list {
+  @media only screen and (min-width: $breakpoint-lg) {
+    padding: 15px 5% 15px calc(5% - 20px);
+  }
+}
+
+ion-item {
+  --min-height: 24px;
+
+  @media only screen and (min-width: $breakpoint-lg) {
+    &:hover {
+      --background-hover: $white;
+      --color: $orange-text;
+      --highlight-height: 0;
+    }
+  }
+}

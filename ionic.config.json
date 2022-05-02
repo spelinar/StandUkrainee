@@ -1,0 +1,7 @@
+{
+  "name": "war",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

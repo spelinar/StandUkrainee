@@ -1,0 +1,38 @@
+<ion-content>
+  <ion-text>
+    <h1>This brand belongs to:</h1>
+  </ion-text>
+  <app-brand
+    #brandComponent
+    [brand]="brand"
+  ></app-brand>
+  <div class="autocomplete-container">
+    <div class="searcher-container">
+      <app-autocomplete
+        #autocomplete
+        class="autocomplete"
+      ></app-autocomplete>
+    </div>
+    <div class="buttons-container">
+      <button
+        (click)="navigateToScan()"
+        class="action-button ion-text-uppercase"
+      >
+        Scan barcode
+      </button>
+      <button
+        (click)="navigateToSearch()"
+        class="action-button ion-text-uppercase"
+      >
+        Company list
+      </button>
+    </div>
+  </div>
+  <div class="footer-container">
+    <ion-img
+      src="./assets/icon/ActAwareLogo.png"
+      class="footer-logo"
+    >
+    </ion-img>
+  </div>
+</ion-content>

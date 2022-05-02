@@ -1,0 +1,47 @@
+@import '../../../../styles/variables';
+
+.header-container {
+  --background: #ffffff;
+  box-shadow: 0 6px 6px #00000029;
+  padding: 10px;
+
+  @media only screen and (max-width: $breakpoint-lg) {
+    box-shadow: none;
+    padding: 10px 10px 0;
+  }
+}
+
+.actaware-logo {
+  height: 70px;
+  margin-left: 5%;
+  user-select: none;
+}
+
+.ukraine-flag {
+  height: 100%;
+  margin-top: 15px;
+  width: 90%;
+}
+
+.mobile-header-container {
+  display: flex;
+  justify-content: center;
+}
+
+.desktop-header-container {
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 10%;
+
+  .link {
+    color: $text;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px;
+    text-decoration: none;
+
+    &:hover {
+      color: $orange-text;
+    }
+  }
+}

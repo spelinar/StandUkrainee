@@ -1,0 +1,16 @@
+<form
+  (ngSubmit)="subscribeEmail()"
+  class="subscribe-form"
+>
+  <ion-input
+    [formControl]="subscribeInputControl"
+    placeholder="Enter your e-mail…"
+    type="email"
+  ></ion-input>
+  <button
+    type="submit"
+    class="action-button ion-text-uppercase"
+  >
+    Subscribe
+  </button>
+</form>

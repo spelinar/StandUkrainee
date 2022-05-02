@@ -1,0 +1,45 @@
+@import './variables';
+
+.cursor {
+  &-default {
+    cursor: default;
+  }
+
+  &-pointer {
+    cursor: pointer;
+  }
+}
+
+.font-weight {
+  &-bold {
+    font-weight: bold;
+  }
+
+  &-normal {
+    font-weight: normal;
+  }
+}
+
+@media only screen and (min-width: $breakpoint-lg) {
+  .hidden-lg-up {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-lg) {
+  .hidden-lg-down {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: $breakpoint-sm) {
+  .hidden-sm-up {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-sm) {
+  .hidden-sm-down {
+    display: none !important;
+  }
+}

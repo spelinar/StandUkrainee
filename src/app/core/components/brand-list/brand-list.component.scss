@@ -1,0 +1,54 @@
+@import "../../../../styles/variables";
+
+:host {
+  display: block;
+  padding: 0 5%;
+
+  @media only screen and (max-width: $breakpoint-lg) {
+    padding: 0;
+  }
+}
+
+
+.brands-list-header {
+  color: $text;
+  margin-bottom: 30px;
+
+  @media only screen and (max-width: $breakpoint-lg) {
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 10px;
+    margin-left: 20px;
+  }
+}
+
+ion-item {
+  --min-height: 24px;
+}
+
+.list-header {
+  color: $text;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 15px 0;
+  user-select: none;
+}
+
+.list-item {
+  color: $text-secondary;
+  font-size: 20px;
+  margin: 0;
+}
+
+.desktop-brand-list {
+  .list-item {
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 24px;
+    width: 100%;
+
+    &:hover {
+      color: $orange-text;
+    }
+  }
+}

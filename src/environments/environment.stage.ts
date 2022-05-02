@@ -1,0 +1,10 @@
+/* eslint-disable max-len */
+
+export const environment = {
+  production: true,
+  apiUrl: 'https://againstwarapi.azurewebsites.net/api/v1/',
+  aboutUrl: 'https://actaware.com/',
+  contactEmail: 'contact@actaware.com',
+  barcodeApiKey: 'ASHhei3WDGz5BbkRvBWee94Ezm55DtkCPkduGf5mAL9RetcL4V0+2VpN64n8dK8b8kjPlyRMoq1lB7dOcHKz26RWiahqIQEeCFloS10waQHLZkRRcmtHNwRsHiefaOtx7nWONY1pGtlWRKtgpEctbIp0EZ3hZOR8SFBNqzNpqdTMVnYpmFANx+lFEiohWWly3XF43DFyHalLHvkgdRUxRR0TbRgBExGDtAYFov9O/VnGWVwPl2q2TVt1fn8mBwd5t0edZkN+/uz+jUJ+YL12HdHIoiYxO7tfhjKsIAlrS9/m8bTFDq5sGXFljXuDywBgoh2ocKXHofHJkV3+hvo5iTbqtp//7zAtbkfKTTcVTqR/9Hxp4xW/6ThCH6vqvtpRf0B25dqigWD0lvGYzQGgtraXxB9Q/GZ80eu5IB9EMbAjvpnWMch5w1vndfSzCzXOvTKTf8p3YEUUZJV7hU4JkhjW4L9bQRHLKuITAbAKmxkCbaOp3fZlGvR8nrHFgQDnl+xnjvMMuZ4emGAGxLIeRePoClspmrpn2htdLl+SeDR0nn/20LKQqmTVdiB73bQvWKxPket1k0QtdYHwPwINLU1TjqkE19SziC40h4VHMKOUr/y+BHlmm+L7XzoH52QrRAVJPNLgr6c8rFZ2D0S4GHhVL4E0A9VhIJKNvpIHu9rY87eZQYUBTxBhVbywft5018WacOZs3RW//URQ5LP07a8V+sywLc32j+lbHLDQNooEEyLWTaLTz1QyeDv7J12r7xEUaPMQCtiozwHS0j/fb6oo9opw1J6A+OQjRPld625+CNSaW2Cgi9ByZzOceAnRJ630b3VWBmuXfvhckIceX+yWoqrLAr3gMELUyJQ3fi4K/DuahI49AwU0diEKl+wtclP/fPIuFZGNG80reRhC08ZjwmUw3FPyDPIg',
+  analytics: '',
+};

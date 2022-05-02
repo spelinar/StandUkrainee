@@ -1,0 +1,95 @@
+@import '../../../../styles/helpers';
+@import '../../../../styles/variables';
+
+h1 {
+  color: $text;
+  font-size: 26px;
+  font-style: italic;
+  text-align: center;
+  margin-top: 60px;
+
+  @media only screen and (max-width: $breakpoint-lg) {
+    font-size: 20px;
+    font-weight: normal;
+    margin-top: 20px;
+  }
+}
+
+.autocomplete-container {
+  @extend .hidden-lg-down;
+
+  display: flex;
+  flex-direction: column;
+  padding: 70px 0 100px;
+
+  .autocomplete {
+    display: inline-block;
+    text-align: initial;
+    max-width: 770px;
+    width: 100%;
+  }
+
+  .searcher-container ::ng-deep {
+    display: flex;
+    justify-content: center;
+
+    .sc-ion-searchbar-md {
+      &.searchbar-input {
+        background: $light-background;
+        border: 2px solid $border-color;
+        border-radius: 6px;
+        box-shadow: none;
+        color: $text;
+        font-size: 25px;
+        height: 79px;
+        line-height: 79px;
+        padding-inline-end: 3.9vw;
+
+        @media only screen and (max-width: $breakpoint-xl) {
+          font-size: 20px;
+          height: 64px;
+          line-height: 64px;
+        }
+      }
+
+      &.searchbar-search-icon {
+        color: #AFAFAF;
+        height: 29px;
+        top: 25px;
+        width: 29px;
+
+        @media only screen and (max-width: $breakpoint-xl) {
+          height: 24px;
+          top: 20px;
+          width: 24px;
+        }
+      }
+
+      &.searchbar-clear-icon {
+        color: $text;
+        width: 29px;
+
+        @media only screen and (max-width: $breakpoint-xl) {
+          width: 24px;
+        }
+      }
+    }
+
+    .list-md {
+      background: none;
+      border: 2px solid $border-color;
+      border-radius: 0 0 6px 6px;
+      margin: -12px 8px 8px;
+      padding: 0;
+
+      ion-item {
+        --min-height: 36px;
+      }
+    }
+  }
+
+  .buttons-container {
+    padding-top: 30px;
+    text-align: center;
+  }
+}

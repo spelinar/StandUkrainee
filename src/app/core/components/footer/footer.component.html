@@ -1,0 +1,28 @@
+<ion-toolbar class="hidden-lg-up ion-no-padding">
+  <ion-segment
+    mode="md"
+    color="red"
+  >
+    <ion-segment-button (click)="navigateToSearch()">
+      <ion-icon
+        name="search"
+        size="small"
+        ></ion-icon>
+      <ion-text class="font">Search</ion-text>
+    </ion-segment-button>
+    <ion-segment-button (click)="navigateToScan()">
+      <ion-icon
+        name="barcode"
+        size="small"
+      ></ion-icon>
+      <ion-text class="font">Scan</ion-text>
+    </ion-segment-button>
+    <ion-segment-button (click)="navigateToSupport()">
+      <ion-icon
+        name="information-circle-outline"
+        size="small"
+      ></ion-icon>
+      <ion-text class="font">Support</ion-text>
+    </ion-segment-button>
+  </ion-segment>
+</ion-toolbar>

@@ -1,0 +1,48 @@
+<div *ngIf="brand">
+  <div class="logo-container">
+    <ion-row class="logo-row">
+      <img [src]="brand.logo">
+    </ion-row>
+  </div>
+  <ion-row class="company-row">
+    {{ brand.company }}
+  </ion-row>
+  <ion-img
+    [src]="'assets/icon/' + brand.vsRussiaStatus + '.png'"
+    class="status-icon"
+  ></ion-img>
+  <ion-row class="status-row">
+    <div
+      [class]="brand.vsRussiaStatus"
+      class="status"
+    >
+      {{ brand?.shortvsRussia }}
+    </div>
+  </ion-row>
+  <ion-row class="vs-russia-row">
+    <span>{{ brand.vsRussia }}</span>
+  </ion-row>
+  <ion-row class="share-buttons">
+    <app-share-buttons></app-share-buttons>
+  </ion-row>
+  <ion-row class="brand-list-container">
+    <div class="brand-list-header">Other brands owned by this company:</div>
+    <div class="brand-list">
+      <div
+        *ngFor="let otherBrand of brand.otherBrands"
+        [hidden]="!otherBrand.logoUrl"
+        class="brand-card"
+      >
+        <div class="brand-card-logo-container">
+          <img [src]="otherBrand.logoUrl">
+        </div>
+        <div
+          [title]="otherBrand.name"
+          class="brand-card-name"
+        >
+          {{ otherBrand.name }}
+        </div>
+      </div>
+    </div>
+  </ion-row>
+</div>

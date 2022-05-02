@@ -1,0 +1,10 @@
+<app-autocomplete
+  #autocomplete
+  [hidden]="!initiated"
+></app-autocomplete>
+<ion-content>
+  <app-brand-list
+    #brandList
+    [hidden]="autocompleteResultsVisible"
+  ></app-brand-list>
+</ion-content>

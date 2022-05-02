@@ -1,0 +1,46 @@
+<h2 class="brands-list-header">All available brands</h2>
+<ion-virtual-scroll
+  *ngIf="deviceWidth < Breakpoint.LG"
+  [approxItemHeight]="24"
+  [items]="brands"
+  [headerFn]="headerFn"
+>
+  <ion-item
+    *virtualHeader="let header"
+    lines="none"
+  >
+    <ion-label class="list-header">{{ header }}</ion-label>
+  </ion-item>
+  <ion-item
+    *virtualItem="let brand"
+    (click)="navigateToSearchItem(brand.id)"
+    button
+    lines="none"
+  >
+    <ion-label class="list-item">{{ brand.brandName }}</ion-label>
+  </ion-item>
+</ion-virtual-scroll>
+<ion-grid
+  *ngIf="deviceWidth >= Breakpoint.LG"
+  class="desktop-brand-list ion-no-padding"
+>
+  <ion-row>
+    <ion-col
+      *ngFor="let chunk of chunkedBrands"
+      size="4"
+    >
+      <ion-row *ngFor="let brand of chunk">
+        <div
+          *ngIf="!brand.header; else header"
+          (click)="navigateToSearchItem(brand?.id)"
+          class="list-item"
+        >
+          {{ brand?.brandName }}
+        </div>
+        <ng-template #header>
+          <div class="list-header">{{ brand?.header }}</div>
+        </ng-template>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+</ion-grid>

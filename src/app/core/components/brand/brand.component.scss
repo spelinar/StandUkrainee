@@ -1,0 +1,191 @@
+@use "sass:math";
+@import "../../../../styles/helpers";
+@import "../../../../styles/variables";
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+
+  &.logo-row {
+    justify-content: center;
+  }
+
+  img {
+    max-height: 115px;
+    width: auto;
+
+    @media only screen and (max-width: $breakpoint-lg) {
+      max-height: 60px;
+      max-width: 250px;
+    }
+  }
+}
+
+.company-row {
+  color: $text-header;
+  display: flex;
+  font-size: 26px;
+  font-weight: bold;
+  justify-content: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 20px;
+  text-align: center;
+
+  @media only screen and (max-width: $breakpoint-lg) {
+    font-size: 20px;
+  }
+}
+
+.status-row {
+  color: $text;
+  display: flex;
+  font-size: 26px;
+  justify-content: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 20px;
+  text-align: center;
+
+  .status {
+    &.unknown {
+      color: darkgray;
+    }
+
+    &.continues {
+      color: red;
+    }
+
+    &.stopped {
+      color: #009245;
+    }
+  }
+
+  @media only screen and (max-width: $breakpoint-lg) {
+    font-size: 20px;
+  }
+}
+
+.status-icon {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto 0;
+  width: 80px;
+
+  @media only screen and (max-width: $breakpoint-lg) {
+    margin-top: 10px;
+    width: 55px;
+  }
+}
+
+.vs-russia-row {
+  color: $text;
+  font-size: 20px;
+  justify-content: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 40px;
+  text-align: center;
+
+  span:first-letter {
+    text-transform: uppercase;
+  }
+
+  @media only screen and (max-width: $breakpoint-lg) {
+    font-size: 18px;
+    margin-top: 25px;
+  }
+}
+
+.share-buttons {
+  justify-content: center;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.brand-list-container {
+  $default-margin: 20px;
+
+  background-color: $light-background;
+  margin-top: $default-margin;
+
+  .brand-list-header {
+    color: $text;
+    font-size: 20px;
+    font-style: italic;
+    margin: $default-margin 0;
+    text-align: center;
+    width: 100%;
+
+    @media only screen and (max-width: $breakpoint-lg) {
+      font-size: 16px;
+    }
+  }
+
+  .brand-list {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+
+    .brand-card {
+      $card-size: 150px;
+
+      background-color: #ffffff;
+      border-radius: 25px;
+      border: 2px solid $border-color;
+      display: flex;
+      flex-direction: column;
+      flex: 0 0 auto;
+      height: $card-size;
+      justify-content: center;
+      margin-bottom: $default-margin;
+      margin-right: $default-margin;
+      text-align: center;
+      width: $card-size;
+
+      &:first-of-type {
+        margin-left: $default-margin;
+      }
+
+      .brand-card-logo-container {
+        $image-height: 100px;
+
+        height: $image-height;
+        padding: math.div($default-margin, 2);
+
+        img {
+          max-height: 100%;
+          position: relative;
+          top: 50%;
+          transform: translateY(-50%);
+          width: auto;
+
+          @media only screen and (max-width: $breakpoint-lg) {
+            max-width: 100px;
+          }
+        }
+
+        @media only screen and (max-width: $breakpoint-lg) {
+          height: 75px;
+        }
+      }
+
+      .brand-card-name {
+        color: $text;
+        font-size: 0.8em;
+        max-width: 100%;
+        overflow: hidden;
+        padding: math.div($default-margin, 2);
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      @media only screen and (max-width: $breakpoint-lg) {
+        height: 125px;
+        width: 125px;
+      }
+    }
+  }
+}

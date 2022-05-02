@@ -1,0 +1,299 @@
+@import '../../../../styles/helpers';
+@import '../../../../styles/variables';
+
+.dashboard-head-container {
+  @extend .hidden-lg-down;
+
+  position: relative;
+
+  .head-background-img {
+    filter: opacity(65%);
+  }
+
+  .head-bottom-flag {
+    max-height: 5px;
+    object-fit: cover;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .head-container {
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    .head-ukraine-heart {
+      max-width: 10%;
+    }
+
+    .head-text-container {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      line-height: 4.75vw;
+      padding: 0 35px;
+
+      .head-text-1 {
+        color: $text-header;
+        font-size: 4.75vw;
+        font-weight: bold;
+        margin: 0;
+      }
+
+      .head-text-2 {
+        color: $text-header;
+        font-size: 3.45vw;
+        margin: 0;
+      }
+    }
+  }
+}
+
+.dashboard-middle-container {
+  background: $light-background;
+  padding: 0 5%;
+
+  .middle-heart-container {
+    @extend .hidden-lg-up;
+
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    .middle-ukraine-heart {
+      width: 66px;
+    }
+
+    .middle-heart-text {
+      align-items: center;
+      color: $text-header;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 10px;
+
+      .heart-text-1 {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 0 0 6px;
+      }
+
+      .heart-text-2 {
+        font-size: 20px;
+        margin: 0;
+      }
+    }
+  }
+
+  .middle-text-container {
+    padding: 105px 40px 70px 0;
+    text-align: left;
+
+    h4 {
+      color: $text-secondary;
+      font-size: 35px;
+      font-weight: bold;
+
+      &.important-text {
+        color: $orange-text;
+        line-height: 3.125vw;
+
+        @media only screen and (max-width: $breakpoint-lg) {
+          color: $text-secondary;
+          font-weight: normal;
+          line-height: 2;
+        }
+      }
+
+      @media only screen and (max-width: $breakpoint-lg) {
+        font-size: 16px;
+        margin: 0;
+      }
+    }
+
+    h5 {
+      color: $text-secondary;
+      font-size: 25px;
+      margin: 0;
+
+      @media only screen and (max-width: $breakpoint-xl) {
+        font-size: 20px;
+      }
+
+      @media only screen and (max-width: $breakpoint-lg) {
+        font-size: 16px;
+      }
+    }
+
+    @media only screen and (max-width: $breakpoint-lg) {
+      padding: 10px 0;
+      text-align: center;
+    }
+  }
+
+  .middle-search-container {
+    padding: 105px 2vw;
+
+    .searcher-container ::ng-deep {
+      @extend .hidden-lg-down;
+
+      .searchbar {
+        padding: 0;
+      }
+
+      .sc-ion-searchbar-md {
+        &.searchbar-input {
+          background: $white;
+          border: 2px solid $border-color;
+          border-radius: 6px;
+          box-shadow: none;
+          color: $text;
+          font-size: 25px;
+          height: 79px;
+          line-height: 79px;
+          padding-inline-end: 3.9vw;
+
+          @media only screen and (max-width: $breakpoint-xl) {
+            font-size: 20px;
+            height: 64px;
+            line-height: 64px;
+          }
+        }
+
+        &.searchbar-search-icon {
+          color: #AFAFAF;
+          height: 29px;
+          top: 25px;
+          width: 29px;
+
+          @media only screen and (max-width: $breakpoint-xl) {
+            height: 24px;
+            top: 20px;
+            width: 24px;
+          }
+        }
+
+        &.searchbar-clear-icon {
+          color: $text;
+          width: 29px;
+
+
+          @media only screen and (max-width: $breakpoint-xl) {
+            width: 24px;
+          }
+        }
+      }
+
+      .list-md {
+        background: none;
+        border: 2px solid $border-color;
+        border-radius: 0 0 6px 6px;
+        margin-top: -4px;
+        padding: 0;
+
+        ion-item {
+          --min-height: 36px;
+        }
+      }
+    }
+
+    .buttons-container {
+      padding-top: 30px;
+      text-align: center;
+
+      .action-button {
+        max-width: 256px;
+        width: 13.333vw;
+
+        @media only screen and (max-width: $breakpoint-lg) {
+          width: 190px;
+        }
+      }
+
+      @media only screen and (max-width: $breakpoint-lg) {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+      }
+    }
+
+    @media only screen and (max-width: $breakpoint-lg) {
+      padding: 30px 0 10px;
+    }
+  }
+
+  .dashboard-about-us-container {
+    @extend .hidden-lg-up;
+
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 20px;
+    width: 100%;
+
+    .about-us-label {
+      color: $text;
+      font-size: 14px;
+    }
+  }
+
+  .dashboard-support-container {
+    @extend .hidden-lg-down;
+
+    border-top: 1px solid $text-secondary;
+    padding: 25px 0 105px;
+
+    h4 {
+      color: $text-secondary;
+      font-size: 30px;
+      margin: 0 0 15px;
+
+      @media only screen and (max-width: $breakpoint-xl) {
+        font-size: 25px;
+      }
+
+      &.important-text {
+        color: $orange-text;
+        font-weight: bold;
+        line-height: 3.125vw;
+        margin: 50px 0 25px;
+        text-align: center;
+        width: 100%;
+      }
+    }
+
+    h5 {
+      color: $text-secondary;
+      font-size: 25px;
+      line-height: 30px;
+      margin: 15px 0 0;
+
+      @media only screen and (max-width: $breakpoint-xl) {
+        font-size: 20px;
+      }
+    }
+
+    .dashboard-support-shared {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .dashboard-support-subscribe {
+      display: flex;
+      justify-content: center;
+      margin-top: 60px;
+      width: 100%;
+    }
+  }
+
+  @media only screen and (max-width: $breakpoint-lg) {
+    background: $white;
+    padding: 20px 30px 0;
+  }
+}

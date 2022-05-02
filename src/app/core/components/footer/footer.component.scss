@@ -1,0 +1,17 @@
+@import '../../../../styles/variables';
+
+@media only screen and (max-width: $breakpoint-sm) {
+  ion-segment-button {
+    color: #0d0d0d;
+    min-width: auto;
+  }
+
+  ion-segment {
+    min-width: auto;
+  }
+
+  .font {
+    font-size: x-small;
+    margin-bottom: 5px;
+  }
+}
